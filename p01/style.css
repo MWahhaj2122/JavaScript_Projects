@@ -8,14 +8,16 @@
     --error-color: orangered;
 }
 body {
-    background-color: lightblue;
+    
     font-family: 'Open Sans', sans-serif;   
     display: flex;
     margin: 0;
     min-height: 100vh;
     align-items: center;
     justify-content: center;
-
+    background-attachment: fixed;
+    background-image:url(laptop2.jpg) ;
+    background-size: cover;
 }
 .container {
     background-color:whitesmoke;
@@ -27,6 +29,7 @@ h2
 {
     text-align: center;
     margin: 20px;
+    color: teal;
 }
 .form {
     padding: 20px 30px;
@@ -97,6 +100,21 @@ button.home{
 }
 a{
     text-decoration: none;
+}
+span{
+    position: absolute;
+    right: 20px;
+    transform: translate(0,-50%);
+    top: 50%;
+    cursor: pointer;
+}
+.fa{
+    font-size: 40px;
+    color: #7a797e;
+    padding-top: 30px;
+    position: relative;
+    left: 100%;
+
 }
 
 

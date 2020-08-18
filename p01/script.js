@@ -18,16 +18,44 @@ function showSuccess(input) {
     formControl.className = 'form-control success';
 }
 // email Valiadation Function
-function isValidEmail(email) {
+function checkEmail(input) {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
+    if (re.test(input.value.trim())) {
+        showSuccess(input);
+    }
+    
+
 }
+//function to check password is equal to confirmPassword
+function checkPassword(input1,input2) {
+    if(input1.value !== input2.value)
+    {
+        showError(input2,"Password don't match")
+    }
+    else  {
+        showSuccess(input);
+        }
+    
+} 
 //function to get id of input in a proper way 
 function toGetId(input) {
-    return input.id.charAt(0) +input.id.slice(1)
+    return input.id.charAt(0) + input.id.slice(1)
     
 }
-
+//function to check length of the input fields
+function checkLength(input,min,max) {
+    if (input.value.length < 3) {
+        showError(input,`${toGetId(input)} must have atleast ${min} characters`);    
+    }
+    else if (input.value.length > 10) {
+        showError(input, `${toGetId(input)} must have less than ${max} characters`);
+        
+    }
+     else {
+        showSuccess(input);    
+    }
+    
+}
 //function to check the field has data in it or not.
  function checkRequired(Array) {
      Array.forEach(function(input)
@@ -43,11 +71,27 @@ function toGetId(input) {
  }
 //Array Declaration
 array = [Username,Email,Password,Password1];
-
+//function to show password 
+var state= false;
+function toggle(){
+    if(state){
+	document.getElementById("Password").setAttribute("type","Password");
+	document.getElementById("eye").style.color='#7a797e';
+	state = false;
+     }
+     else{
+	document.getElementById("Password").setAttribute("type","text");
+	document.getElementById("eye").style.color='#5887ef';
+	state = true;
+     }
+}
 //Event Listener for the form on submit
  form.addEventListener('submit',function(e){
  e.preventDefault();
  checkRequired(array);
-
+ checkLength(Username,3,10);
+ checkLength(Password,8,30);
+ checkEmail(Email);
+ checkPassword(Password,Password1);
 
 })
