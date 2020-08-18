@@ -22,32 +22,43 @@ function isValidEmail(email) {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
 }
-//function to get id of input in a proper way 
-function toGetId(input) {
-    return input.id.charAt(0) +input.id.slice(1)
-    
-}
 
-//function to check the field has data in it or not.
- function checkRequired(Array) {
-     Array.forEach(function(input)
-     {
-         if(input.value === ''){
-             showError(input, `${toGetId(input)} is required`)
-         }
-         else{
-             showSuccess(input);
-         }
-     }
-     )
- }
-//Array Declaration
-array = [Username,Email,Password,Password1];
+
+
 
 //Event Listener for the form on submit
- form.addEventListener('submit',function(e){
- e.preventDefault();
- checkRequired(array);
-
-
+form.addEventListener('submit',function(e){
+e.preventDefault();
+     if(username.value === '')
+     {
+      showError(username,'Username is Invalid')
+     }
+     else{
+       showSuccess(username);
+     }
+   if(email.value === '')
+     {
+      showError(email,'Email  is Invalid')
+     }
+     else if(!isValidEmail(email.value)) // if email.value is true we donot want to execute this condition so, we use NOT(!),if email.value is false this statement becomes true and execute error block 
+     {
+      showError(email,'Email is not correct') 
+     }
+     else{
+      showSuccess(email);
+     }
+     if(password.value === '')
+     {
+      showError(password,'Password is Invalid')
+     }
+     else{
+         showSuccess(password);
+      }
+     if(password1.value === '')
+     {
+      showError(password1,'Password donot match')
+     }
+     else{
+         showSuccess(password1);
+     }
 })
