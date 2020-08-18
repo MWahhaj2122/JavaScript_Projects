@@ -85,6 +85,20 @@ function toggle(){
 	state = true;
      }
 }
+//function2 to show Confirm Passsword
+var state = false;
+function toggle(){
+    if(state){
+	document.getElementById("Password1").setAttribute("type","Password1");
+	document.getElementById("eye").style.color='#7a797e';
+	state = false;
+     }
+     else{
+	document.getElementById("Password1").setAttribute("type","text");
+	document.getElementById("eye").style.color='#5887ef';
+	state = true;
+     }
+}
 //Event Listener for the form on submit
  form.addEventListener('submit',function(e){
  e.preventDefault();
