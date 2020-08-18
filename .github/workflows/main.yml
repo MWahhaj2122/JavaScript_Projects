@@ -33,5 +33,5 @@ jobs:
          
       run:  npm install -g surge 
     - name: Run Surge 
-      run: surge ./ Wahhaj_JavaScript.surge.sh --token ${{ secrets.Surge_token }}
+      run: surge ./  mwahhaj-javascript-projects.surge.sh --token ${{ secrets.Surge_token }}
         
