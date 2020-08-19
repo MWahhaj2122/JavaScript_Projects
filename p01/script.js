@@ -3,6 +3,7 @@ const username =  document.getElementById('Username');
 const email =  document.getElementById('Email');
 const password =  document.getElementById('Password');
 const password1 =  document.getElementById('Password1');
+const body = document.getElementById('body1');
 //All Functions
 
 //Show Error Message Function
@@ -71,37 +72,15 @@ function checkLength(input,min,max) {
  }
 //Array Declaration
 array = [Username,Email,Password,Password1];
-//function to show password 
-var state= false;
-function toggle(){
-    if(state){
-	document.getElementById("Password").setAttribute("type","Password");
-	document.getElementById("eye").style.color='#7a797e';
-	state = false;
-     }
-     else{
-	document.getElementById("Password").setAttribute("type","text");
-	document.getElementById("eye").style.color='#5887ef';
-	state = true;
-     }
-}
-//function2 to show Confirm Passsword
-var state = false;
-function toggle(){
-    if(state){
-	document.getElementById("Password1").setAttribute("type","Password1");
-	document.getElementById("eye").style.color='#7a797e';
-	state = false;
-     }
-     else{
-	document.getElementById("Password1").setAttribute("type","text");
-	document.getElementById("eye").style.color='#5887ef';
-	state = true;
-     }
+
+//function to change backgroundcolor
+function changeBackgroundColor(body1) {
+  body1.className = 'body1 changeColor'      
 }
 //Event Listener for the form on submit
  form.addEventListener('submit',function(e){
  e.preventDefault();
+ changeBackgroundColor(body1);
  checkRequired(array);
  checkLength(Username,3,10);
  checkLength(Password,8,30);

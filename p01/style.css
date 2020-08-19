@@ -6,6 +6,7 @@
 :root{
     --success-color: limegreen;
     --error-color: orangered;
+    --change-color:  rgba(2, 15, 29, 0.9);
 }
 body {
     
@@ -16,11 +17,10 @@ body {
     align-items: center;
     justify-content: center;
     background-attachment: fixed;
-    background-image:url(laptop2.jpg) ;
-    background-size: cover;
+    background-color:hsla(212, 54%, 14%, 1);
 }
 .container {
-    background-color:whitesmoke;
+    
     border-radius: 5px;
     box-shadow: 0 , 2px, 10px rgba(0,0,0, hsla(0, 0%, 50%, .5));
     width: 450px;
@@ -101,23 +101,9 @@ button.home{
 a{
     text-decoration: none;
 }
-span{
-    position: absolute;
-    right: 20px;
-    transform: translate(0,-50%);
-    top: 50%;
-    cursor: pointer;
+.body1.changeColor {
+    background-color:var(--change-color) ;
 }
-.fa{
-    font-size: 40px;
-    color: #7a797e;
-    padding-top: 30px;
-    position: relative;
-    left: 100%;
-
-}
-
-
 
 
 
