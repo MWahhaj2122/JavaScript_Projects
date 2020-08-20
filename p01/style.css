@@ -8,6 +8,10 @@
     --error-color: orangered;
     --change-color:  rgba(2, 15, 29, 0.9);
 }
+.heading {
+    color: teal;
+    
+}
 body {
     
     font-family: 'Open Sans', sans-serif;   
