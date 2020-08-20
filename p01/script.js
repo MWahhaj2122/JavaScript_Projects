@@ -1,6 +1,6 @@
 const form =  document.getElementById('form');
 const username =  document.getElementById('Username');
-const email =  document.getElementById('Email');
+const email =  document.getElementById('email');
 const password =  document.getElementById('Password');
 const password1 =  document.getElementById('Password1');
 const body = document.getElementById('body1');
@@ -24,6 +24,11 @@ function checkEmail(input) {
     if (re.test(input.value.trim())) {
         showSuccess(input);
     }
+    else {
+        
+        showError(input,` Please provide valid ${toGetId(input)} `)
+    }
+
     
 
 }
@@ -71,7 +76,7 @@ function checkLength(input,min,max) {
      )
  }
 //Array Declaration
-array = [Username,Email,Password,Password1];
+array = [Username,email,Password,Password1];
 
 //function to change backgroundcolor
 function changeBackgroundColor(body1) {
@@ -84,7 +89,7 @@ function changeBackgroundColor(body1) {
  checkRequired(array);
  checkLength(Username,3,10);
  checkLength(Password,8,30);
- checkEmail(Email);
+ checkEmail(email);
  checkPassword(Password,Password1);
 
 })
