@@ -55,6 +55,10 @@ body {
     cursor: pointer;
     transform: scale(1.2);
 }
+.seat.occupied:hover{
+    cursor: default;
+    transform: scale(1);
+}
 .legend .seat:not(.occupied):hover {
     cursor: default;
     transform: scale(1);
@@ -83,8 +87,8 @@ body {
 .row {
     display: flex;        
 }
-.container {
-    perspective: 100px;
+.container  {
+    perspective: 90px;
 }
 .screen {
     background-color: white;
