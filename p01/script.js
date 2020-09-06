@@ -2,7 +2,7 @@ const form =  document.getElementById('form');
 const username =  document.getElementById('Username');
 const email =  document.getElementById('email');
 const password =  document.getElementById('Password');
-const password1 =  document.getElementById('Password1');
+const confirmPassword =  document.getElementById('Confirm-Password');
 const body = document.getElementById('body1');
 //All Functions
 
@@ -38,9 +38,9 @@ function checkPassword(input1,input2) {
     {
         showError(input2,"Password don't match")
     }
-    else  {
-        showSuccess(input);
-        }
+    else if(input1.value.length == " ")  {
+        showError(input1, "Password is required")        
+    }
     
 } 
 //function to get id of input in a proper way 
@@ -50,10 +50,10 @@ function toGetId(input) {
 }
 //function to check length of the input fields
 function checkLength(input,min,max) {
-    if (input.value.length < 3) {
-        showError(input,`${toGetId(input)} must have atleast ${min} characters`);    
+    if (input.value.length < min) {
+        showError(input,`${toGetId(input)} must have atleast ${min} characters`);            
     }
-    else if (input.value.length > 10) {
+    else if (input.value.length > max) {
         showError(input, `${toGetId(input)} must have less than ${max} characters`);
         
     }
@@ -76,7 +76,7 @@ function checkLength(input,min,max) {
      )
  }
 //Array Declaration
-array = [Username,email,Password,Password1];
+array = [username,email,password,confirmPassword];
 
 //function to change backgroundcolor
 function changeBackgroundColor(body1) {
@@ -87,9 +87,9 @@ function changeBackgroundColor(body1) {
  e.preventDefault();
  changeBackgroundColor(body1);
  checkRequired(array);
- checkLength(Username,3,10);
- checkLength(Password,8,30);
+ checkLength(username,3,10);
+ checkLength(password,8,30);
  checkEmail(email);
- checkPassword(Password,Password1);
+ checkPassword(password,confirmPassword);
 
 })
