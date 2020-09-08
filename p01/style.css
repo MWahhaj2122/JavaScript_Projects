@@ -109,7 +109,11 @@ a{
 .body1.changeColor {
     background-color:var(--change-color) ;
 }
-
+ /* @media screen and (min-width: 750px){
+   body {
+ max-height: 600px; }
+}
+*/
 
 
 
