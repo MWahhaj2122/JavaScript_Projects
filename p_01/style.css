@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+* {
+    box-sizing: border-box;
+}
+:root {
+    --success-color : limegreen;
+    --error-color :#ad0000;
+}
+
+body{
+    background-image: linear-gradient(to right, #6cc4c8, #518e99, #3a5c68, #222f37, #5fc0c4);
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+.container {
+    background-image: linear-gradient(to right, #315c56, #497372, #648b8e, #80a4aa, #9ebdc6);
+    width: 450px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,.3);
+}
+.form{
+    margin: 15px;
+    padding: 10px;
+}
+h2{
+    text-align: center;
+}
+.form-control {
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+    position: relative;
+}
+.form-control label {
+    
+    display: block;
+    padding-bottom: 5px;
+}
+.form-control input {
+    border: 2px solid gray;
+    border-radius: 2px;
+    width: 100%;
+    display: block;
+    padding: 5px 5px;
+    font-size: 16px;
+}
+.form-control input:focus {
+    outline: 0;
+    border-color: teal;
+}
+.form-control.success input {
+    border-color: var(--success-color);
+}
+.form-control.error input {
+    border-color: var(--error-color);
+}
+.form-control small {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: var(--error-color);
+    visibility: hidden;       
+}
+.form-control.error small {
+    visibility: visible;
+}
+.form button {
+    background-color: #3725f8;
+    color: white;
+    border: 1px solid #3725f8;
+    border-radius: 4px;
+    display: block;
+    padding: 8px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer; 
+}
+.btn  {
+    background-color: #3725f8;
+    text-decoration-style: none;
+    cursor: pointer;
+    border: 1px solid #3725f8;
+    border-radius: 4px;
+    padding: 8px;
+    width: 100%; 
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+} 
+.btn a{
+    color: white;
+    text-decoration-line: none;
+}
+
+
+

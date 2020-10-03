@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+:root{
+    --primary-color : black;
+    --secondry-color : yellow;
+    --modal-duration : 2s;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    transition: 1s ease;
+}
+body.nav-class {
+   transform: translateX(200px);/* depends upon width of nav */ 
+}
+nav {
+    background-color: var(--primary-color);
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    color: white;
+    z-index: 100;
+    transform: translateX(-100%);  /*  Used when we click then appear otherwise hide */
+}
+nav .logo {
+    padding: 10px 0;
+    text-align: center;
+}
+nav .logo img {
+    border-radius: 50%;
+    max-width: 80px;
+    max-height: 80px;
+    margin-bottom: 10px;
+}
+nav ul {
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(200, 200, 200, .3) ;
+}
+nav ul li:first-of-type {
+    border-top: 1px solid rgba(200, 200, 200, .3) ;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;    
+}
+nav ul li a:hover {
+   text-decoration: underline;
+   text-decoration-color: var(--secondry-color);
+}
+header {  
+    background-color: var(--primary-color);
+    color: white;
+    padding: 40px 15px;
+    margin: 0;
+    text-align: center;
+    position: relative;
+    height: 230px;
+}
+header h1 {
+    margin: 0;
+    margin-top: 10px;
+}
+header p {
+    padding: 10px;
+}
+button, input[type = "submit"]{
+    background-color: var(--secondry-color);
+    color: var(--primary-color);
+    padding: 10px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 5px;
+}
+button, input[type = "submit"]:focus{
+    outline: none;
+}
+
+.toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+.container {
+    padding: 15px;
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.modal-container {
+    background-color: rgba(0, 0,0,.9);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    display: none;
+    margin: 0;
+}
+.modal {
+    background-color: white;
+    position: absolute;
+    border-radius: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); /*Used to Center the modal Window*/
+    width: 350px;
+    max-width: 100%;
+    padding: 0;  
+    margin: 0;
+    height: 430px;
+    max-height: 100%;
+    animation: delay;
+    animation-duration: var(--modal-duration);   
+}
+.modal-container.open-Window {
+    display: block;
+}
+.modal-header {
+    background-color: black;
+    color: white;
+    padding: 5px 0;
+    height: 50px;
+    margin: 0;
+   border: 1px solid black;
+}
+.modal-header h2 {
+  padding-left: 15px;
+  margin:0;
+}
+
+.modal .closebtn {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    padding: 5px;
+
+}
+.modal-content {
+    padding: 10px;
+    margin: 0;
+}
+.modal-content p {
+    padding-left: 30px;
+}
+.form div {
+    padding-bottom: 15px;
+}
+.form div label {
+    display: block;
+    padding-bottom: 5px;
+}
+.form div input {
+    width: 100%;
+    padding: 5px;
+}
+
+.form div input[type = "submit"]{
+    margin: 0;
+}
+@keyframes delay {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

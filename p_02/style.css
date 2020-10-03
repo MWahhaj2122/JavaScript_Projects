@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+*{
+    box-sizing: border-box;
+}
+body {
+    background-image: url("image.jpg");
+    background-size: cover;
+    font-family: 'Lato', sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 110vh;
+    margin: 0;
+}
+
+.movie-container {
+    margin: 20px 0;
+}
+.movie-container select {
+    border: 0;
+    margin-left: 10px;
+    border-radius: 5px;
+    padding: 5px 15px 5px 15px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.seat {
+    background-color: darkgrey;
+    height: 25px;
+    width: 20px;
+    margin: 3px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    text-align: center;
+    color: black;
+}
+.seat.occupied {
+    background-color: white;
+    cursor: default;
+}
+.seat.selected {
+    background-color: black;
+    box-shadow: 0 1px 7px rgba(255, 255, 255,.9);
+    color: white;
+}
+.seat:nth-of-type(2){
+    margin-right: 18px;
+}
+.seat:nth-last-of-type(2){
+    margin-left: 18px;
+}
+.seat:not(.occupied):hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+.legend .seat:not(.occupied):hover{
+    cursor: default;
+    transform: scale(1);
+}
+.legend {
+    background-color: rgb(0,0, 0,.3);
+    border-radius: 10px;
+    padding: 5px 10px;
+    list-style-type: none; 
+    justify-content: space-between;
+    display: flex;
+    color: darkgray;
+    margin-bottom: 0;
+
+}
+.legend li {
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    display: flex;
+}
+.legend li small {
+    margin-left: 5px;
+
+}
+.screen {
+    background-color: black;
+    height: auto;
+    display: flex;
+    background-size: cover;
+    width: auto;
+    margin: 10px 0;
+    transform: rotateX(-45deg);
+    box-shadow: 0 3px 10px rgba(255, 255, 255, .7);
+}
+.container {
+    perspective: 400px;
+    margin-bottom: 10px;
+}
+ 
+.row {
+    display: flex;
+}
+.text span {
+    color: yellow;
+}
+.screen{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; 
+    height: 0;
+  }
+  .screen iframe{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .btn {
+      border: 1px solid black;
+      border-radius: 5px;
+      padding: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: darkgray;
+      color: black;
+      justify-content: space-evenly;
+      margin: 0 10px;
+      text-decoration: none;
+      width: 150px;   
+  }
+
+  @media (max-width: 800px){
+    body{
+        min-height: 100vh;
+    }
+    .movie-container label {
+        display: block;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .legend{
+        margin-bottom: 10px;
+        margin-top: 0;
+    }
+  .screen {
+      width: 150px;
+      display: inline-block;
+      justify-content: center;
+      align-items: center;
+      margin-left: 50px;      
+      height: 80px;
+    }  
+  .rows {
+     width: 270px;
+ }
+}

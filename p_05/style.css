@@ -25,6 +25,10 @@ aside {
     border-right: 1px solid black;
     margin-top: 4px;
 }
+.btn {
+    display: inline-block;
+    text-decoration: none;
+}
 button {
     border: 1px solid black;
     border-radius: 5px;
@@ -37,6 +41,7 @@ button {
     cursor: pointer;
     padding: 10px 0;
     color: white;
+    text-decoration: none;
 }
 button:hover{
     transform: scale(1.1);
@@ -96,14 +101,19 @@ h3{
 
 
  @media (max-width : 700px){
-    
-    .container {
-        min-height: 100% !important;
+    body {
         height: auto;
+        max-height: 100%;
+        margin: 0;
+    }
+ 
+    .container {
+  /*      min-height: 100% !important;
+        height: auto; */
         margin: 0;
         padding: 0; 
         display: flex;
-        flex-direction: column;     
+        flex-direction: column-reverse;       
     }
     aside {     
     text-align: center;
@@ -114,12 +124,20 @@ h3{
   h1{
       text-align: center;
       margin-bottom: 10px;
+      margin-top: 0;
   }
   main {
       margin: 0;
-    }
+      }
     .name {
         min-width: 290px;
         margin: 15px 0 ; 
+    }
+    button  {
+        width: 100%;
+    }
+    .btn {
+        width: 100%;
+        text-decoration: none;
     }  
 }

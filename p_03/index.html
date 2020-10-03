@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/progress.css">
+</head>
+<body>
+    <div class="loader">
+        <span>V</span>
+        <span>I</span>
+        <span>D</span>
+        <span>E</span>
+        <span>O </span>
+        <span>P</span>
+        <span>L</span>
+        <span>A</span>
+        <span>Y</span>
+        <span>E</span>
+        <span>R</span>
+    </div>
+
+
+    <video src="assets/videos/video.mp4"  id="video" class="screen"  poster="assets/images/maxresdefault.jpg" ></video>
+    <div class="controls">
+       
+       <button class="btn" id="play">
+        <i class="fas fa-play fa-2x"></i>
+       </button>
+
+       <button class="btn" id="stop">
+        <i class="fas fa-stop fa-2x"></i>
+       </button>
+
+       <input type="range" class="progress" id="progress" value="0" min="0" max="100" step="0.1">
+          
+       <span class="timestamp" id="timestamp">00:00</span>
+ 
+       
+       <button class="btn" id="volume">
+        <i class="fas fa-volume-up fa-2x"></i>
+       </button>
+       
+
+       <button class="btn" id="expand-screen">
+        <i class="fas fa-expand-arrows-alt fa-2x"></i>
+       </button>
+       
+     
+    </div>
+    <a href="../index.html"><button class="homebtn"> Home </button></a> 
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/1393fa49b4.js" crossorigin="anonymous"></script>
+</body>
+</html>

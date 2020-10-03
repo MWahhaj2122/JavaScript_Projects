@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Questrial', sans-serif;
+    background-color: #101820FF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    max-height: 100vh;
+}
+.loader {
+    perspective: 700px;
+    margin-bottom: 5px;
+}
+
+.loader>span {
+    font-size: 60px;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins",sans-serif;
+    display: inline-block;
+    animation: flip 2.6s infinite linear;
+    transform-origin: 0 70%;
+    transform-style: preserve-3d;	
+}
+@keyframes flip {
+    35% {
+       transform: rotateX(360deg);
+     }
+    100% {
+       transform: rotateX(360deg);
+     }
+}
+
+.loader>span:nth-child(even) {
+    color: #FEE715;
+}
+.loader>span:nth-child(odd) {
+    color: #FEE715;
+}
+.loader>span:nth-child(2) {
+    animation-delay: 0.3s;
+}
+.loader>span:nth-child(3) {
+    animation-delay: 0.6s;
+}
+.loader>span:nth-child(4) {
+    animation-delay: 0.9s;
+}
+.loader>span:nth-child(5) {
+    animation-delay: 1.2s;
+}
+.loader>span:nth-child(6) {
+    animation-delay: 1.5s;
+}
+.loader>span:nth-child(7) {
+    animation-delay: 1.8s;
+}
+
+
+.screen {
+    width: 60%;
+    background-color: black;
+    cursor: pointer;
+}
+.controls{
+    display: flex;
+    width: 60%;
+    background-color:  rgba(0, 0, 0, .4);
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border: 0;
+    margin: 0;
+}
+.btn{
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+.fa-stop  {
+  color: #FEE715;
+}
+.fa-volume-down {
+  color: #FEE715;  
+}
+.fa-volume-up {
+    color: #FEE715;
+}
+.fa-volume-mute {
+    color: #FEE715;
+}
+.fa-play:hover{
+   transform: scale(1.2);    
+}
+.fa-pause:hover{
+    transform: scale(1.2);
+}
+.fa-volume-up:hover{
+    transform: scale(1.2);    
+ }
+ .fa-volume-down:hover{
+    transform: scale(1.2);    
+ }
+ .fa-volume-mute:hover{
+    transform: scale(1.2);    
+ }
+ .fa-expand-arrows-alt:hover{
+    transform: scale(1.2);    
+ }
+ .fa-stop:hover{
+    transform: scale(1.2);    
+ }
+.fa-play {
+    color: darkred;
+}
+.fa-pause {
+    color: darkred;
+}
+.fa-volume-up {
+    color: yellow;
+}
+.fa-expand-arrows-alt{
+    color: darkred;
+}
+span.timestamp {
+    color: #FEE715;
+    font-size: 16px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+/*.progress {
+    margin-left: 10px;
+}*/
+.homebtn {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 25px;
+    cursor: pointer;
+    background-color: darkgray;
+    color: black;
+    margin-top: 10px;
+    width: 400px;
+    max-width: 100%;
+       
+}
+
+@media (max-width: 800px){
+   body {
+    justify-content: center;  
+    }
+  .screen, .controls {
+      width: 90%;
+  }
+  .loader span {
+      font-size: 40px;
+  }
+  .homebtn {
+      width: 300px;
+  }
+}

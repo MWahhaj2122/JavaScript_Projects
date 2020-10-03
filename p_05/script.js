@@ -83,12 +83,12 @@ async function generateRandomUser() {
   }
 // AddEvents to the buttons
 1.//AddUser on EventListner
-addUser.addEventListener('click', generateRandomUser );
+addUser.addEventListener('click', generateRandomUser);
 2.//DoubleWealth on EventListner
 doubleMoney.addEventListener('click', doubleWealth);      
 3.//Millionaries on EventListner
-millionaries.addEventListener('click', onlyMillionaries)
+millionaries.addEventListener('click', onlyMillionaries);
 4.//sortByRichest on EventListner
-richest.addEventListener('click', sortByRichest)
+richest.addEventListener('click', sortByRichest);
 5. // TotalWealth EventListner
-totalWealth.addEventListener('click', totalNetWealth)
+totalWealth.addEventListener('click', totalNetWealth);
