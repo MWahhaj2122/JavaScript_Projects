@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+</head>
+<body>
+    <div class="startGame">
+        <h1>The HangMan Game</h1>
+        <button class="startGameBtn">StartGame</button>
+    </div>
+  <div class="header">
+    <button class="refreshBtn">
+        <i class="fas fa-redo "></i>
+    </button>
+   <h1>Hangman</h1>
+   <button class="closeBtn">
+    <i class="fas fa-window-close"></i>
+</button>
+ </div>
+   <p>Can you guess hidden letter? Please Enter your letter</p>
+    <div class="game-container">
+       <svg height = "250px" width = "200px" class="figure-container">
+        <!--PlatForm -->
+        <line  x1 = "60" y1 = "20" x2 = "120" y2 = "20" class="platform"/> <!-- -->
+        <line  x1 = "120" y1 = "20" x2 = "120" y2 = "60" class="platform"/> <!-- -->
+        <line  x1 = "60" y1 = "20" x2 = "60" y2 = "200" class="platform"/>  <!-- -->
+        <line  x1 = "20" y1 = "200" x2 = "100" y2 = "200" class="platform"/> <!-- -->
+        <!--Head of Hangman-->
+        <circle cx = "120" cy = "80"  r = "20" class="hangman-part"/> <!-- -->
+        <!--Eyes of Hangman-->
+        <circle cx = "110" cy ="80" r = "2" class="hangman-part color" />
+        <circle cx = "130" cy ="80" r = "2" class="hangman-part color" />
+        <!--Body of Hangman--> 
+        <line  x1 = "120" y1 = "100" x2 = "120" y2 = "160" class="hangman-part"/> <!-- -->
+        <!--Arms of Hangman-->
+        <line  x1 = "120" y1 = "130" x2 = "140" y2 = "110" class="hangman-part"/> <!-- -->
+        <line  x1 = "120" y1 = "130" x2 = "100" y2 = "110" class="hangman-part"/> <!-- -->
+        <!--Foots of Hangman-->
+        <line  x1 = "120" y1 = "160" x2 = "100" y2 = "180" class="hangman-part"/> <!-- -->   
+        <line  x1 = "120" y1 = "160" x2 = "140" y2 = "180" class="hangman-part"/>
+    </svg>
+   <!--Hint Div-->
+    <div class="hint" id="hint">
+      <p>(hint: it is a programming Language)</p>  
+    </div>
+
+
+  <!--Container for Wrong Letters-->
+    <div class="wrong-letters" id="wrong-letters"> </div>
+    <!--Container for Entered letters-->
+    <div class="word" id="word"> </div>
+
+   </div>
+
+    <!--Container for pop-up message for win or lose-->
+    <div class="popup-container" id="popup-container">
+     <div class="pop-up">
+         <h2 id="win-lose">
+             You Win!
+         </h2>
+         <button id="restart">
+             Reset Game
+         </button>
+     </div>
+ 
+   </div>
+
+     <!--Container for sliding notification for repeated input-->
+   <div class="slider-container " id="slider-container">
+       <p>You have already entered this letter</p>
+   </div>
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
