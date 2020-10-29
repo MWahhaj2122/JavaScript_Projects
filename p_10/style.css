@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap');
+*{
+    box-sizing: border-box;
+}
+body {
+    background: linear-gradient(0deg, #00203FFF,black);
+    height: 100vh;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+}
+h1 {
+    margin: 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+    
+}
+h2 {
+    margin:10px 0;
+    padding: 0;
+}
+.music-container {
+    background-color: white;
+    position: relative;
+    border-radius: 20px;   
+    min-width: 450px;
+    margin: 20px;
+    min-height: 450px;
+    
+}
+
+.image-container {
+    position: relative;
+    width: 220px;
+    border-radius: 100%;  
+    padding: 20px;
+    margin: 0 auto;
+    box-shadow: 5px 5px 20px 10px rgba(0, 0, 0);
+}
+.image-container::after {
+    content: '';
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 45%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-30%,-20%);
+}
+.image-container .cover img {
+    max-width: 180px;
+    max-height: 200px;
+    border-radius: 50%;
+    animation: rotate 8s linear infinite;
+    animation-play-state: paused;
+    /* animation: upward 2s linear ease-in; */
+    z-index: 50;
+    margin: 0; 
+}
+ .cover {
+     margin: 0;
+     padding: 0;
+ }
+.music-container.play .image-container .cover img {
+    animation-play-state: running;
+}
+.progress-container {
+    background-color: gray;
+    width: 330px;
+    height: 10px;
+    margin-left: 60px;
+    position: absolute;
+    bottom: 70px; 
+    margin-bottom: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.progress-container .progress {
+    background-color: black;
+    width: 0;
+    height: 10px;
+    border-radius: 10px;
+}
+.time {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+   position: absolute;
+   bottom: 65px;
+}
+.totalDuration {
+   margin-left: 250px;
+}
+.time-stamp {
+   margin-left: 60px; 
+}
+.navigation {
+    background-color: black;
+    padding: 10px;
+    margin: 0 auto;
+    width: 330px; 
+    display: flex;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 15px;
+    left: 13%;
+    
+}
+.action-btn {
+    border: 0;
+    color: white;
+    background-color: transparent;
+    padding: 0 20px;
+    margin: 0;
+    cursor: pointer;
+}
+.action-btn:focus {
+ outline: none;
+ color: gray;
+}
+/* .action-btn:active {
+    color: gray;
+} */
+.action-btn:hover {
+    transform: scale(.95);
+}
+.imageList {
+   max-width: 50px;
+   max-height: 50px;
+   border-radius: 50%;
+   
+}
+/* .list {
+    list-style-type: none;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 0;
+    padding: 0;
+}
+.list-item {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: flex-start;
+} */
+
+
+
+/* @keyframes upward {
+   from {
+       
+   } 
+   to {
+    transform: translateY(-40px);
+   }
+} */
+@keyframes rotate {
+    from {
+    transform: rotate(0deg);   
+    }
+    to {
+    transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+</head>
+<body>
+    
+    <div class="music-container " id="music-container">
+     <h1>Music Player</h1>  
+        <div class="music-info">
+         <h2 class="title" id="title">Humdard</h2>
+         <div class="progress-container" id="progress-container">
+             <div class="progress" id="progress"></div>
+         </div>
+         <div class="time">
+         <div class="time-stamp" id="time-stamp">
+            00:00 
+         </div>
+         <div class="totalDuration" id="total-duration">
+            00:00 
+         </div>
+          </div>
+     </div>     
+     <audio src="audio/Hamdard.mp3" id="audio"></audio>
+       <div class="image-container">
+          <div class="cover" id="cover">
+            <img src="images/Hamdard.jpg">  
+          </div>  
+       </div>
+       <div class="navigation">
+         <button id="arrow-down" class="action-btn">
+           <i class="fas fa-arrow-down"></i>  
+         </button>  
+         <button id="previous" class="action-btn">
+          <i class="fas fa-backward"></i>    
+         </button>
+         <button id="play" class="action-btn">
+          <i class="fas fa-play"></i> 
+         </button>
+          <button id="forward" class="action-btn">
+           <i class="fas fa-forward"></i>   
+          </button>
+          <button id="volume" class="action-btn">
+           <i class="fas fa-volume-up"></i>   
+          </button>
+          <button id="random" class="action-btn">
+            <i class="fas fa-random"></i>   
+          </button>
+       </div>  <!-- 
+       <ul class="list">
+        <li class="list-item">
+         <img src="images/alif-real.jpg" class="imageList" />
+         <h2 class="title" id="title">Humdard</h2>     
+        </li>
+        <li class="list-item"></li>
+        <li class="list-item"></li>
+       </ul>  
+    -->
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -115,6 +115,7 @@ function addTransactionUI(transaction) {
  function init() {
      // Clearing list items when user first appear on app    
      list.innerHTML = '';
+     //For every item of Transactions array function is calling
     transactions.forEach(addTransactionUI);     
     sumUI(); 
 }
