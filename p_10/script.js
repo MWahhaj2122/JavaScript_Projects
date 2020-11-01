@@ -114,12 +114,12 @@ function loadSong(song) {
       minutes = `0${minutes}`
   }
  let totalMinutes = Math.floor(duration/60);
-   if(totalMinutes === NaN){
+   if(totalMinutes === null){
       totalDuration.innerText = `00:00`}
       else if(totalMinutes <10){
         totalMinutes = `0${totalMinutes}`
     }    
-  let remainingSeconds = Math.floor(duration - totalMinutes*60)
+  let remainingSeconds = Math.floor(duration - totalMinutes*60);
    if(remainingSeconds < 10){
     remainingSeconds = `0${remainingSeconds}`
    }
@@ -135,9 +135,7 @@ function loadSong(song) {
       const width = this.clientWidth;
       const offsetX = e.offsetX;
       const duration = audio.duration;
-      audio.currentTime = (offsetX/width) * duration;
-      console.log(offsetX,width,duration)  
-
+      audio.currentTime = (offsetX/width) * duration;  
   } 
   function reload() {
       totalDuration.innerText = `00:00`;
