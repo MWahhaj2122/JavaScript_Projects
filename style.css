@@ -360,7 +360,7 @@ header h1 {
 
 #projects .projects-item-img2 {
     display: flex;
-    background-image: url(./images/Project-02.png);
+    background-image: url(./images/project-02-real1.png);
     justify-content: flex-start;
     width: 650px;
     height: 500px;
@@ -515,9 +515,82 @@ header h1 {
     outline: none;
     transition: .3s ease transform;
 } 
-
-
-
+#projects .projects-item-img9 {
+    display: flex;
+    background-image: url(./images/project-09.png);
+    justify-content: flex-start;
+    width: 650px;
+    height: 500px;
+    background-size: cover;
+    background-position: center;  
+    align-items: center;
+    border: 3px solid black;
+    overflow: hidden;   
+    margin: 0 10px;
+    max-width: 650px;
+    max-height: 500px;
+    position: relative;
+    z-index: 1;
+    outline: none;
+    transition: .3s ease transform;  
+}
+#projects .projects-item-img10 {
+    display: flex;
+    background-image: url(./images/project-10.png);
+    justify-content: flex-start;
+    width: 650px;
+    height: 500px;
+    background-size: cover;
+    background-position: center;  
+    align-items: center;
+    border: 3px solid black;
+    overflow: hidden;   
+    margin: 0 10px;
+    max-width: 650px;
+    max-height: 500px;
+    position: relative;
+    z-index: 1;
+    outline: none;
+    transition: .3s ease transform;  
+}
+#projects .projects-item-img11 {
+    display: flex;
+    background-image: url(./images/project11.png);
+    justify-content: flex-start;
+    width: 650px;
+    height: 500px;
+    background-size: cover;
+    background-position: center;  
+    align-items: center;
+    border: 3px solid black;
+    overflow: hidden;   
+    margin: 0 10px;
+    max-width: 650px;
+    max-height: 500px;
+    position: relative;
+    z-index: 1;
+    outline: none;
+    transition: .3s ease transform;  
+}
+#projects .projects-item-img12 {
+    display: flex;
+    background-image: url(./images/project12.png);
+    justify-content: flex-start;
+    width: 650px;
+    height: 500px;
+    background-size: cover;
+    background-position: center;  
+    align-items: center;
+    border: 3px solid black;
+    overflow: hidden;   
+    margin: 0 10px;
+    max-width: 650px;
+    max-height: 500px;
+    position: relative;
+    z-index: 1;
+    outline: none;
+    transition: .3s ease transform;     
+}
 
 #projects .overlay::after {
     content: '';

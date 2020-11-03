@@ -3,65 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expense Tracker</title>
+    <title>Expense Tracker App</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 </head>
 <body>
-    <h2>Expense Tracker</h2>
-    <div class="container">
-     <!--Balance-->
-    <h4>Balance</h4>
-     <h1 id="balance">0.00 PKR</h1>
-   <!--Income and Expense Summary-->
-    <div class="incomeExpense-Container">
-      <div>
-          <h4>Income</h4>
-          <p class="money plus" id="moneyPlus">+0.00 PKR </p>
+    <h4 class="name">Made By M.Wahhaj</h4>
+   <h1>Expense Tracker</h1> 
+   <div class="container">
+    <!--Currency Div-->
+    <div class=" currency" >
+      
+      
+        <h4>Select your currency</h4> 
+      <div class="formSettings" id="formSettings">  
+      <select  id="currency" class="currency">
+        <option value='AED'>AED - United Arab Emirates</option>
+        <option value='ARS'>ARS - Argentina</option>
+        <option value='AUD'>AUD - Australia</option>
+        <option value='BGN'>BGN - Bulgaria</option>
+        <option value='BRL'>BRL - Brazil</option>
+        <option value='BSD'>BSD - Bahamas</option>
+        <option value='CAD'>CAD - Canada</option>
+        <option value='CHF'>CHF - Switzerland</option>
+        <option value='CLP'>CLP - Chile</option>
+        <option value='CNY'>CNY - China</option>
+        <option value='COP'>COP - Colombia</option>
+        <option value='CZK'>CZK - Czech Republic</option>
+        <option value='DKK'>DKK - Denmark</option>
+        <option value='DOP'>DOP - Dominican Republic</option>
+        <option value='EGP'>EGP - Egypt</option>
+        <option value='EURG'>EUR - Germany</option>
+        <option value='EURA'>EUR - Austria</option>
+        <option value='EURB'>EUR - Belgium</option>
+        <option value='EURC'>EUR - Cyprus</option>
+        <option value='EURE'>EUR - Estonia</option>
+        <option value='EURFin'>EUR - Finland</option>
+        <option value='EURFr'>EUR - France</option>
+        <option value='EURGr'>EUR - Greece</option>
+        <option value='EURIr'>EUR - Ireland</option>
+        <option value='EURI'>EUR - Italy</option>
+        <option value='EURL'>EUR - Latvia</option>
+        <option value='EURLi'>EUR - Lithuania</option>
+        <option value='EURLu'>EUR - Luxembourg</option>
+        <option value='EURM'>EUR - Malta</option>
+        <option value='EURN'>EUR - Netherlands</option>
+        <option value='EURP'>EUR - Portugal</option>
+        <option value='EURSk'>EUR - Slovakia</option>
+        <option value='EURSl'>EUR - Slovenia</option>
+        <option value='EURS'>EUR - Spain</option>
+        <option value='FJD'>FJD - Fiji</option>
+        <option value='GBP'>GBP - United Kingdom</option>
+        <option value='GTQ'>GTQ - Guatemala</option>
+        <option value='HKD'>HKD - Hong Kong</option>
+        <option value='HRK'>HRK - Croatia</option>
+        <option value='HUF'>HUF - Hungary</option>
+        <option value='IDR'>IDR - Indonesia</option>
+        <option value='ILS'>ILS - Israel</option>
+        <option value='INR'>INR - India</option>
+        <option value='ISK'>ISK - Iceland</option>
+        <option value='JPY'>JPY - Japan</option>
+        <option value='KRW'>KRW - South Korea</option>
+        <option value='KZT'>KZT - Kazakhstan</option>
+        <option value='MVR'>MVR - Maldives</option>
+        <option value='MXN'>MXN - Mexico</option>
+        <option value='MYR'>MYR - Malaysia</option>
+        <option value='NOK'>NOK - Norway</option>
+        <option value='NZD'>NZD - New Zealand</option>
+        <option value='PAB'>PAB - Panama</option>
+        <option value='PEN'>PEN - Peru</option>
+        <option value='PHP'>PHP - Philippines</option>
+        <option value='PKR' selected>PKR - Pakistan</option>
+        <option value='PLN'>PLN - Poland</option>
+        <option value='PYG'>PYG - Paraguay</option>
+        <option value='RON'>RON - Romania</option>
+        <option value='RUB'>RUB - Russia</option>
+        <option value='SAR'>SAR - Saudi Arabia</option>
+        <option value='SEK'>SEK - Sweden</option>
+        <option value='SGD'>SGD - Singapore</option>
+        <option value='THB'>THB - Thailand</option>
+        <option value='TRY'>TRY - Turkey</option>
+        <option value='TWD'>TWD - Taiwan</option>
+        <option value='UAH'>UAH - Ukraine</option>
+        <option value='USD'>USD - United States</option>
+        <option value='UYU'>UYU - Uruguay</option>
+        <option value='ZAR'>ZAR - South Africa</option>
+
+      </select>
+    </div>
+    </div>
+    <!--Balance -->
+     <div class="balance">
+     <h4>Current Balance</h4>
+    <div class="balanceCircle" id="totalBalancePercentage">
+      
+        <h4 class="balance-percentage-color">0%</h4>
+
+    </div>
+    <div id="balance" class="balanceText">
+    </div>
+    </div>
+    <!--Income Container-->
+    <div class="income">
+    <h4>Total Income</h4>  
+    <span class="money Plus" id="income">PKR 30,000</span>   
+ </div>
+<!--Total Expense-->
+<div class="expense">
+    <h4>Total Expense</h4>
+        <div class="expenseCircle" id="totalExpensePercentage">
+          <h4 class="expense-percentage-color">0%</h4>
+        </div>
+      <div id="expense" class="expenseText">  
+      
       </div>
-      <div>
-        <h4>Expense</h4>
-         <p class="money minus" id="moneyMinus">-0.00 PKR</p>
-    </div>
-    </div>
-    <!--Transaction History-->
-    <h3>Transaction History</h3>
-      <ul class="list" id="list">
-      <!--
-        <li class="plus">
-         Salary 
-        <span>100,000 PKR </span>
+    
+   </div>
+  <!--Transaction History--> 
+   <h4>Transaction History</h4>
+   
+   <ul class="list" id="list">
+  <!-- <li class="money Plus">
+          Salary 
+         <span>PKR 30,000.00</span> 
          <button class="deleteBtn">X</button>
-       </li>
-       <li class="minus">
-        Elctric Bill 
-       <span> -30,000 PKR </span> 
-        <button class="deleteBtn">X</button>
-      </li>
-    -->
-      </ul>
-     <!--Add New Transaction-->
-     <h3>Add New Transaction</h3>
-     <form class="form" id="form">
-       <div class="form-control">
-         <label for="description">Description</label>  
-         <input type="text" id="description" placeholder="Description of Transaction">
-       </div>
-       
-       <div class="form-control">
-        <label for="amount">
-         Transaction Amount
-          <br />
-          For Income,enter positive number and for expense, enter negative number.
-        </label>   
-        <input type="number" id="amount" placeholder="Transaction Amount">
-       </div>
+        </li>
 
-       <button class="transactionBtn">Add New Transaction</button>
-     </form>
+        <li class="money Minus">
+            Bill 
+           <span>PKR 10,000.00</span> 
+           <button class="deleteBtn">X</button>
+          </li>
+        -->
+   </ul>
+   <!--Add Transaction Button-->
+     <h4 class="add-transaction">Add Transaction</h4>
+    <button class="add-transactionBtn" id="add-transactionBtn">+</button>
+
+   <div class="add-transaction-overlay" id="overlay">
+      <div class="add-transaction-container">
+        <button class="closeBtn" id="closeBtn">
+          <i class="fas fa-window-close"></i>
+      </button>
+        <form class="form" id = "form">
+            <h2>Add transaction</h2>
+            
+            <div class="description"> 
+         <label for="description">Enter your description</label>
+         <input type="text" id="description" placeholder="Enter description">
+            </div>
+            <div class="input"> 
+                <label for="amount">Enter your amount</label>
+                <input type="number" id="amount" placeholder="Enter transaction amount">
+                <h5>Type</h5>       
+            </div>
+               <div class="radioButton">
+                
+                 <input type="radio" id="incomeBtn" value="income" name="Type" checked>
+                 <label for="incomeBtn">Income</label>
+                 
+                 <input type="radio" id="expenseBtn" value="expense" name="Type">
+                 <label for="expenseBtn">Expense</label>
+               </div> 
+
+               <button class="addTransactionBtn">Add Transaction</button>
+        </form>
+
+
+
+      </div>
+
+
+   </div>
+   
+   
     </div>
 
 
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

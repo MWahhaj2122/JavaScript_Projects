@@ -185,6 +185,7 @@ h1 {
 }
 .slider-container {
     margin-top: 10px;
+
 }
 .slider-container p {
     position: absolute;
@@ -197,7 +198,7 @@ h1 {
 }
 
 .slider-container.show p {
-    animation: slidingBar 1s ease-in-out forwards;    
+    animation: slidingBar 1s ease-in-out forwards;
 }
 
  @keyframes slidingBar {

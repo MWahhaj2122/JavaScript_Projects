@@ -1,137 +1,220 @@
-const moneyPlus = document.getElementById('moneyPlus');
-const moneyMinus = document.getElementById('moneyMinus');
-const form = document.getElementById('form');
+const currency = document.getElementById('currency');
+const balance = document.getElementById('balance');
+const income1 = document.getElementById('income');
+const expense1 = document.getElementById('expense');
 const list = document.getElementById('list');
+const form = document.getElementById('form');
 const description = document.getElementById('description');
 const amount = document.getElementById('amount');
-let balance = document.getElementById('balance');
-//Dummy Transactons
-const dummyTransactions = [
-            
-];
-
- // Assigning 
- let transactions = dummyTransactions; 
- //Function when user add new transaction it adds to add Transaction
- function addTransaction(e) {
-      e.preventDefault();
-    //Condition for not submit form when description or Transaction amount is empty     
-    if(description.value.trim() == '' || amount.value.trim() == ''){
-           alert("Please enter valid description or amount");
-    }else {
-      const transaction = 
-      {
-        id: randomGenerator(),
-        description: description.value,
-        amount: +amount.value // It is a String so we convert it to a number
-      }
-    //Pushing Transaction to the transactions
-    transactions.push(transaction);
-   //Updating UI of Transaction Hstory 
-   addTransactionUI(transaction);   
-   //Updating Income Expense and Balance
-    init();
-   //Clear the values of description and amount of form  
-   description.value = '';
-   amount.value = '';
- //Storing values in local Storage
- //  //Local Storage check
-//  localStorage.setItem('Array', JSON.stringify(dummyTransactions[0]));
-//If Transactions has some value then store values to local Storage
-if(transactions){
-   const array =  transactions.map((transaction, index) => transaction );    
-     localStorage.setItem("Object", JSON.stringify(array));
-}
-
-}
-
-}
-//Function to populateUI with local Storage
-  function populateUI() { 
-               
-  const Object = JSON.parse(localStorage.getItem("Object"));
-     if(Object != ''){ 
-      transactions = Object;                         
-      init();
-}
-
-} 
-
-// populateUI();
-
-//Function to generate Random Id 
- function randomGenerator(){
-    return Math.floor(Math.random()*1000000000);
+const incomeBtn = document.getElementById('incomeBtn');
+const expenseBtn = document.getElementById('expenseBtn');
+const addTransactionOverlay = document.getElementById('overlay');
+const addTransactionBtn = document.getElementById('add-transactionBtn');
+const closeBtn = document.getElementById('closeBtn');
+const deleteBtn = document.getElementById('deleteBtn');
+const totalBalancePercentage1 = document.getElementById('totalBalancePercentage');
+const totalExpensePercentage1 = document.getElementById('totalExpensePercentage');
+const formSettings = document.getElementById('formSettings');
+//dummy Transactions
+const dummyTransactions = [];
+let transactions = dummyTransactions;
+//Generate Random ID function
+ function generateRandomID() {
+     return Math.floor(Math.random()*100000000);
  }
+ function addTransactionsUI(transaction) {
+    
+    //finding Type of amount 
+    const type = transaction.amount > 0 ? '+' : '-';
+    //Creating list item
+    const item = document.createElement('li');
+    //
+    item.innerHTML = `
+             ${transaction.description}
+             <span>${currency.value} ${(transaction.amount)}</span>
+             <button class = "deleteBtn" onclick = "deleteTransaction(${transaction.id},${transaction.amount})">X</button>
+             `
+     
+     item.classList.add( transaction.amount > 0 ? "moneyPlus" : "moneyMinus"); 
+    //Appending Child
+     list.appendChild(item);
+ }
+ function addTransaction(e) {
+     e.preventDefault();
+     //Getting total Amount
+    const amounts = transactions.map(transaction => transaction.amount);
+     
+    //Getting Balance
+       const total = amounts 
+                       .reduce((acc,amount) => (acc+=amount),0)    
+                       .toFixed(2);
+  
+    if( description.value == '' || amount.value == ''){
+         alert("Please enter valid description or amount")
+        }
 
- //Function to add Transaction in Transaction History
-function addTransactionUI(transaction) {
-  // Check whether amount is income or epense and store sign in type
-  const type = transaction.amount > 0 ? '+' : '-';
-  // Create DOM element <li> </li>
-  const item = document.createElement('li');
-  //Add class to item(list item) depending upon type of transcation whether it is income or expense
-  item.classList.add(transaction.amount > 0 ? 'plus' : 'minus');
-  // Updating innerHtml of <li> </li> 
-  item.innerHTML = `
-              ${transaction.description}
-              <span>${type}${Math.abs(transaction.amount)}</span>
-              <button class = "deleteBtn" onclick="deleteTransaction(${transaction.id})">X</button> 
-              `
- // Adding <li> </li> in <ul> </ul>
- list.appendChild(item);
-}
-//Function to add Balance Income And Expense
+    
+     else {
+      const transaction = {
+                  id: generateRandomID(),
+                  description: description.value,     
+                  amount: +amount.value
+      }
+   //Radio Buttons   
+    if(incomeBtn.checked){
+         transaction.amount = +amount.value;
+    } else if(expenseBtn.checked){
+        transaction.amount = -amount.value;
+    // Condition which doesnot allow user to remove last income value unless he removes expense first    
+       if(transaction.amount < -total ){
+          alert('You donot have enough balance');
+          return false; 
+       }    
+    } 
+    
+     transactions.push(transaction);           
+     init();
+     sumUI();
+     //Local Storage
+     if(transaction){
+        localStorage.setItem("Object",JSON.stringify(transactions.map(transaction => transaction))); 
+     }
+     addTransactionOverlay.style.display = 'none';
+     description.value = '';
+     amount.value = '';
+     expenseBtn.checked = false;
+    }
+
+ }
+ //sumUI 
   function sumUI() {
-   //Getting Amounts of all Transactions and storing it in new Array called amounts      
-   const amounts = transactions.map(transaction => transaction.amount); 
-   // Calculating total Balance
-         
-     const total = amounts
-                 .reduce((acc,amount) => (acc += amount),0) //Accumulated Result
-                 .toFixed(2);    
-    // Calculating Income
+  //Getting total Amount
+    const amounts = transactions.map(transaction => transaction.amount);
+     
+  //Getting Balance
+     const total = amounts 
+                     .reduce((acc,amount) => (acc+=amount),0)    
+                     .toFixed(2);
+  //Getting Income
      const income = amounts
-                    .filter(amount => amount > 0)  
-                    .reduce((acc,amount) => (acc+=amount),0) // .filter() returns an Array so we use .reduce to convert it to the number 
-                    .toFixed(2);
-    // Calculating Expense                 
-     const expense = amounts
-                    .filter(amount => amount < 0)  
-                    .reduce((acc,amount) => (acc+=amount),0) // .filter() returns an Array so we use .reduce to convert it to the number 
-                    .toFixed(2); 
-     //Updating Balance UI using Total balance
-     balance.innerText = `${total} PKR`; 
-     //Updating Income UI using Income
-     moneyPlus.innerText = `${income} PKR`;
-     //Updating Income UI using Income
-     moneyMinus.innerText = `${expense} PKR`; 
-                }
-                
+                      .filter(amount => amount > 0)         
+                      .reduce((acc,amount) => (acc+=amount),0)
+                      .toFixed(2);
+      const expense = amounts
+                      .filter(amount => amount < 0)         
+                      .reduce((acc,amount) => (acc+=amount),0)
+                      .toFixed(2);
+    //Total Balance Percentage                  
+    //  const  difference = (total - expense) / total;
+     const totalBalancePercentage = 100 - ((Math.abs(expense)/income).toFixed(2)* 100);
+    
+    // Total Expense Percentage
+     const  totalExpensePercentage = 100 - totalBalancePercentage;                                  
+   //Updating Balance  
+     balance.innerText = `${currency.value} ${total}`
+    //Updating Income
+    income1.innerText = `${currency.value} ${income}`  
+     //Upading Expense
+     expense1.innerText = `${currency.value} ${(expense)}` 
       
+     // Updating Percentage Balance
+     if(total == 0.00){
+        totalBalancePercentage1.innerHTML = `
+        <h4>0%</h4>
+`
+    // Updating Percentage Expense
+        totalExpensePercentage1.innerHTML = `
+        <h4>0%</h4>
+`
+     }else {
+     totalBalancePercentage1.innerHTML = `
+                      <h4>${totalBalancePercentage}%</h4>
+     `
+     // Updating Percentage Expense
+     totalExpensePercentage1.innerHTML = `
+                      <h4>${totalExpensePercentage}%</h4>
+     `
+     } 
+    }
+//DeleteTransaction
+  function deleteTransaction(id,Amount) {
+   //Getting total Amount
+   const amounts = transactions.map(transaction => transaction.amount);
+     
+   //Getting Balance
+      const total = amounts 
+                      .reduce((acc,amount) => (acc+=amount),0)    
+                      .toFixed(2);
 
+      
+            if(Amount > total){
+               alert("Please remove some of your expense first");
+               return false;}
+            else {
+                transactions = transactions.filter(transaction => 
+                    transaction.id != id         
+                )    
+            }     
+           
+      init();
+    
+    }
+//Function to add Local Storage
+ function populateUI(){
+    const Object = JSON.parse(localStorage.getItem("Object"));     
+    // const localStorageCurrency = localStorage.getItem("currency");
+    if(Object != ''){
+     transactions = Object;
+     init(); 
+  }
+   
+      //currency.value = localStorageCurrency ? localStorageCurrency : "PKR";
+      //init();    
+    }
 
-// Initializing Function when page load
- function init() {
-     // Clearing list items when user first appear on app    
-     list.innerHTML = '';
-     //For every item of Transactions array function is calling
-    transactions.forEach(addTransactionUI);     
-    sumUI(); 
+function init() {
+    list.innerHTML = '';
+    transactions.forEach(addTransactionsUI);
+    sumUI();
 }
-// Function to delete Transaction
-function deleteTransaction(id) {
-  transactions = transactions.filter(transaction => transaction.id != id);   
-   init();
+//Function Calling
+init();
+sumUI(); 
+//Add Transaction from form
+form.addEventListener('submit', addTransaction)
+//Adding Form on Button
+addTransactionBtn.addEventListener('click', () => {
+    addTransactionOverlay.style.display = 'flex';  
+})
+     //Close Button of Form
+     closeBtn.addEventListener('click', ()=> {
+         
+        alert("Are you sure you want to close add Transaction!!")      
+        addTransactionOverlay.style.display = 'none';
+        
+    })
+   
+   //Currency Add Event Listner
+//  currency.addEventListener('change', (e)=> { 
+//       init();
+//      localStorage.setItem("currency", JSON.stringify(currency.value));
+// });
+    
+//UpdateUI when user reload the page
+const ObjectUI = JSON.parse(localStorage.getItem("Object"));
+if(ObjectUI){
+    window.onload = populateUI;
 }
-
- //Function Calling
-  init();
-//Event Listner on Form Submit
-form.addEventListener('submit', addTransaction);   
-//Update UI with local Storage when user reload the page. 
- const ObjectUI = JSON.parse(localStorage.getItem("Object"));
-  if(ObjectUI){
-     window.onload = populateUI()
-} 
+//Updating the value on the basis of Local storage
+  currency.value = localStorage.getItem('currency') !== null ? localStorage.getItem('currency') : 'PKR';   
+//When Reload the page we got exact same currency Value. 
+  sumUI();
+     
+  formSettings.addEventListener('change', (e)=> {
+     
+    const currencyValue = e.target.value;
+    localStorage.setItem('currency',currencyValue);
+    
+    sumUI();
+    });
 
