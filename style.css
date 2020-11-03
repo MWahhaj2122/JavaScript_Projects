@@ -475,8 +475,50 @@ header h1 {
     position: relative;
     z-index: 1;
     transition: .3s ease transform;
-    
+    outline: none;   
 }
+#projects .projects-item-img7 {
+    display: flex;
+    background-image: url(./images/project-07-real.png);
+    justify-content: flex-start;
+    width: 650px;
+    height: 500px;
+    background-size: cover;
+    background-position: center;  
+    align-items: center;
+    border: 3px solid black;
+    overflow: hidden;   
+    margin: 0 10px;
+    max-width: 650px;
+    max-height: 500px;
+    position: relative;
+    z-index: 1;
+    outline: none;
+    transition: .3s ease transform;
+}
+#projects .projects-item-img8 {
+    display: flex;
+    background-image: url(./images/project-08.png);
+    justify-content: flex-start;
+    width: 650px;
+    height: 500px;
+    background-size: cover;
+    background-position: center;  
+    align-items: center;
+    border: 3px solid black;
+    overflow: hidden;   
+    margin: 0 10px;
+    max-width: 650px;
+    max-height: 500px;
+    position: relative;
+    z-index: 1;
+    outline: none;
+    transition: .3s ease transform;
+} 
+
+
+
+
 #projects .overlay::after {
     content: '';
     position: absolute;
