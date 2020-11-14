@@ -21,9 +21,28 @@ body {
 }
 .name {
     position: absolute;
-    left: 0;
+    right: 0;
     top: 0;
     margin: 5px 0 5px 5px;
+}
+.homeBtn  {
+    position: absolute;
+    top: 35px;
+    left: 5px;
+    background-color: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    border: 2px solid black;
+} 
+ a{
+    text-decoration-line: none; 
+}
+.homeBtn:focus {
+    outline: none;
+}
+.homeBtn:active {
+    transform: scale(.95);
 }
 .balanceCircle, .expenseCircle {
     border: 12px solid gray;
@@ -249,7 +268,18 @@ h5 {
     transform: translate(1500%,-50%); 
   }       
 }
-
+@media (min-width: 750px){
+    .homeBtn {
+       top: 110px; 
+       left: 35px; 
+    }
+}
+@media (max-width: 290px){
+    .homeBtn {
+       top: 0; 
+       left: 0; 
+    }
+}
 
 
 
