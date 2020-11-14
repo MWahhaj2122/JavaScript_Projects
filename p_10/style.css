@@ -24,9 +24,29 @@ h1 {
     border-bottom: 1px solid black;
     
 }
+
 h2 {
     margin:10px 0;
     padding: 0;
+}
+.homeBtn  {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    border: 2px solid black;
+} 
+ a{
+    text-decoration-line: none; 
+}
+.homeBtn:focus {
+    outline: none;
+}
+.homeBtn:active {
+    transform: scale(.95);
 }
 .music-container {
     background-color: white;
