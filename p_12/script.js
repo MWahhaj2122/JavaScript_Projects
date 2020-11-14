@@ -116,5 +116,6 @@ formSettings.addEventListener('change', (e)=> {
 startGameBtn.addEventListener('click', ()=> {
      startGameContainer.style.display = 'none';
       time = 11;
-      updateTime();  
+      updateTime();
+      textInput.focus();  
     });

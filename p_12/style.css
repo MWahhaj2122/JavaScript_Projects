@@ -15,6 +15,12 @@ button {
     padding: 5px 15px;
     font-size: 16px;
 }
+.btn {
+    position: absolute;
+    left: 46%;
+    bottom: 30px;
+    font-size: 20px;
+}
 .settings-btn {
     position: absolute;
     left: 30px;
