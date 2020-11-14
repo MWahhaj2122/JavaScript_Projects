@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+* {
+   box-sizing: border-box; 
+}
+body {
+    font-family: 'Lato', sans-serif;
+    /* background-color: #B0B8B4FF; */
+    /* background-color: #ABD6DFFF; */
+    background-color: #ffffff;
+    margin: 0;
+}
+button {
+    cursor: pointer;
+}
+button:active {
+    transform: scale(.95);
+}
+button:focus {
+    outline: none;
+}
+form input:focus {
+   outline: none;
+}
+header {
+    position: relative;
+    /* background-color: #2f3542; */
+    background-color: #101820FF;
+    color: #FEE715FF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+header h1 {
+    margin: 0 0 30px;
+}
+header form {
+    position: relative;
+    max-width: 100%;
+    width: 500px;
+}
+header input {
+    position: relative;
+    font-size: 16px;
+    border-radius: 50px;
+    border: 0;
+    width: 100%;
+    padding: 17px;
+}
+header .btn {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    color: #FEE715FF;
+    background-color: #101820FF;
+    border: 0;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 16px;
+} 
+.container {
+    position: relative;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 650px;
+    }
+.container ul {
+    list-style-type: none; 
+    margin: 0;
+    padding:10px;
+}
+.container li {
+   padding: 10px 0; 
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   border-bottom: 1px solid rgba(0, 0, 0, .3);
+    
+}
+.container h2{
+    text-align: center;
+    padding: 40px 0 20px;
+    border-bottom: 1px solid black;
+}
+.container p {
+    margin-left: 60px;
+}
+
+.btn {
+    background-color: black;
+    color: white;
+    border: 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.btn1 {
+    position: absolute;
+    top: 0;
+    left: 3px;
+    
+    background-color: black;
+    color: white;
+    border: 0;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+.container.end {
+    display: flex;
+    justify-content: center;
+}
+.container.end button {
+    margin: 10px;
+}
+ @media (max-width:412px){
+ .container {
+    margin: 0;
+    width: 380px;      
+ }  
+ .container li {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between; 
+ }
+ .container p {
+    margin-left: 20px;
+} 
+ 
+} 
