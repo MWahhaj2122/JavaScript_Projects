@@ -14,6 +14,25 @@ body {
     margin: 0;
     padding-bottom: 100px;    
 }
+.homeBtn  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    border: 2px solid black;
+} 
+ a{
+    text-decoration-line: none; 
+}
+.homeBtn:focus {
+    outline: none;
+}
+.homeBtn:active {
+    transform: scale(.95);
+}
 .filter-container {
     margin-top: 20px;
     width: 80vw;
