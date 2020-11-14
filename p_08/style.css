@@ -8,6 +8,9 @@ body {
     margin: 0;
     scroll-behavior: smooth;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 .container {
     margin: auto;
@@ -18,9 +21,9 @@ body {
     align-items: center;
     text-align: center;
 }
-.container h1 {
+.container h2 {
     color: yellow;
-    
+    margin-right: 70px;
 }
 .flex {
  display: flex;
@@ -155,6 +158,28 @@ a {
     border: 1px solid white;
     border-radius: 5px;
 }
+.homeBtn  {
+    position: absolute;
+    top: 15px;
+    left: 3px;
+    background-color: transparent;
+    color: yellow;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    
+}
+.homeBtn:focus {
+    outline: none;
+}
+.homeBtn:active {
+    transform: scale(.95);
+}
+ 
+ a{
+    text-decoration-line: none; 
+}
+
 @media (max-width : 800px){
     .meals {
       grid-template-columns: repeat(3, 1fr); 
@@ -179,6 +204,7 @@ a {
 @media (max-width : 500px){
     input[type='text']{
         width: 100%;
+        margin-left: 50px;
     }
     .meals {
         grid-template-columns: repeat(1, 1fr); 
@@ -195,5 +221,35 @@ a {
           font-size: 15px;    
  
         } 
-        
+        .container h2 {
+         margin-right: 0;   
+        }        
+}
+@media (max-width : 321px){
+    input[type='text']{
+        width: 100%;
+    }
+    .meals {
+        grid-template-columns: repeat(1, 1fr); 
+      }
+      .meal {
+         width: 250px;
+         height: 250px;
+      }
+      .selected-meal ul li  {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;       
+          text-justify: auto;
+          font-size: 15px;    
+ 
+        } 
+        .homeBtn {
+            font-size: 16px;
+            padding: 5px;
+            top: 5px;                
+        }
+        .container h2 {
+            margin-top: 34px;   
+           }        
 }
