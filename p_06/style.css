@@ -172,6 +172,16 @@ button, input[type = "submit"]:focus{
 .form div input[type = "submit"]{
     margin: 0;
 }
+.btn {
+    display: flex;
+    margin: 0 auto;
+    padding: 10px;
+    text-decoration-style: none;
+}
+ a{
+    text-decoration-line: none;
+}
+
 @keyframes delay {
     from {
         opacity: 0;
