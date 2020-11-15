@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <title>Web Speech</title>
+</head>
+<body>
+    <!-- All the  content in this container -->
+    <div class="container">
+    <!-- Title of APP -->
+     <h1>Web Speech</h1> 
+     <!-- Button to show text container -->
+
+      <button class="btn toggle-btn" id="random">
+        Toggle Custom Text  
+      </button>
+        <!-- Text Container appears when user click on toggle-btn -->
+      <div class="text-container" id="text-container">
+          <!-- Button to close text Container -->
+        <button class="btn close" id="close">
+         <i class="fas fa-window-close"></i>
+        </button>
+        <h3>Voice Change</h3>
+        <!-- We Add Options to this through JS -->
+        <select id="select" class="select"></select>
+        <!-- Input field where user entered text -->
+        <textarea  id="text" placeholder="Please provide your custom text here"></textarea>  
+        <!-- Button used to read the user input and then pass to API so that voice appears -->
+        <button class="btn read" id="read">Read Custom Text</button>
+    </div>
+         <!-- We add images through JS-->
+         <main id="main"></main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
