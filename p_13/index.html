@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <title>Memory Cards</title>
+</head>
+<body>
+    <!-- Button to clear all cards from memory -->
+    <button class="btn clear" id="clear">
+      <i class="fas fa-trash"> Clear all cards</i>  
+    </button>
+    <!-- Button to add new Card -->
+    <h1>Memory Cards
+     <button class="btn btn-small" id="add-card">
+       <i class="fas fa-plus"> Add new card</i>  
+     </button>   
+    </h1>
+    <!-- Add Card Container -->
+    <div class="add-card-container">
+    <!-- Card that is active that shows on the screen -->
+      <div class="card active" id="card">
+        <div class="inner-card">
+           <div class="card-front">
+            What is HTML?  
+           </div>
+           <div class="back-card">
+            HTML stands for hypertext markup language. 
+           </div> 
+        </div>
+    <!-- Card that is on back-->
+      <div class="card" id="card">
+        <div class="inner-card">
+           <div class="card-front">
+            What is CSS?
+           </div>
+           <div class="back-card">
+            CSS stands for cascading style sheet. 
+           </div> 
+        </div>
+      </div>
+      
+      <div class="navigation" id="navigation">
+        <button class="nav-btn" id="previous">
+          <i class="fas fa-arrow-left"></i>  
+        </button>
+        <!-- currentPage/total Number -->
+        <div class="current-number" id="current"></div>
+         <button class="nav-btn" id="next">
+           <i class="fas fa-arrow-right"></i>  
+         </button>
+
+      </div>
+    
+    </div>
+  <!-- When we click on add new card button an overlay appears on the screen where we can add card -->
+    <div class="add-new-card" id="add-new-card">
+      <h1>Add New Card
+       <button class="btn close" id="close">
+         <i class="fas fa-times"></i>  
+       </button>   
+      </h1>
+    <!-- Form Controls where we have text input for questions and answers -->
+    <div class="form-control">
+        <label for="question">Question</label>
+       <textarea  id="question" placeholder="Enter your question here."></textarea> 
+    </div>
+    <div class="form-control">
+        <label for="answer">Answer</label>
+        <textarea  id="answer" placeholder="Enter your answer here."></textarea>
+    </div>
+   <!-- Button to submit -->
+     <button class="btn" id="submit">
+       <i class="fas fa-plus"> Add new card</i>  
+     </button> 
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -337,10 +337,8 @@ header h1 {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
-
-#projects .projects-item-img1 {
+#projects .projects-item-img1, .projects-item-img2, .projects-item-img3, .projects-item-img4-a, .projects-item-img4-b, .projects-item-img5, .projects-item-img6, .projects-item-img7, .projects-item-img8, .projects-item-img9, .projects-item-img10, .projects-item-img11, .projects-item-img12, .projects-item-img13,.projects-item-img14, .projects-item-img15 {
     display: flex;
-    background-image: url(./images/2.png);
     justify-content: flex-start;
     width: 650px;
     height: 500px;
@@ -356,241 +354,62 @@ header h1 {
     z-index: 1;
     outline: none;
     transition: .3s ease transform;
+}
+
+
+
+#projects .projects-item-img1 {
+    background-image: url(./images/2.png);
 }
 
 #projects .projects-item-img2 {
-    display: flex;
+
     background-image: url(./images/project-02-real1.png);
-    justify-content: flex-start;
-    width: 650px;
-    height: 500px;
-    background-size: cover;
-    background-position: center;  
-    align-items: center;
-    overflow: hidden;   
-    margin: 0 10px;
-    border: 3px solid black;
-    max-width: 650px;
-    max-height: 500px;
-    position: relative;
-    z-index: 1;
-    transition: .3s ease transform;
-    outline: none;
 }
 #projects .projects-item-img3 {
-    display: flex;
+    
     background-image: url(./images/Project-03.png);
-    justify-content: flex-start;
-    width: 650px;
-    height: 500px;
-    background-size: cover;
-    background-position: top;  
-    align-items: center;
-    overflow: hidden;   
-    margin: 0;
-    max-width: 650px;
-    max-height: 500px;
-    margin: 0 10px;
-    border: 3px solid black;
-    position: relative;
-    z-index: 1;
-    transition: .3s ease transform;
-    outline: none;
 }
 #projects .projects-item-img4-a {
-    display: flex;
     background-image: url(./images/Project-04-a.png);
-    justify-content: flex-start;
-    width: 650px;
-    height: 500px;   
-    background-size: cover;
-    background-position: top;  
-    align-items: center;
-    overflow: hidden;   
-    margin: 0;
-    max-width: 650px;
-    max-height: 500px;
-    margin: 0 10px;
-    border: 3px solid black;
-    position: relative;
-    z-index: 1;
-    transition: .3s ease transform;
-    outline: none;
 }
 #projects .projects-item-img4-b {
-    display: flex;
     background-image: url(./images/Project-04-b.png);
-    justify-content: flex-start;
-    width: 650px;
-    height: 500px;
-    background-size: cover;
-    background-position: top;  
-    align-items: center;
-    overflow: hidden;   
-    margin: 0;
-    max-width: 650px;
-    max-height: 500px;
-    margin: 0 10px;
-    border: 3px solid yellow;
-    position: relative;
-    z-index: 1;
-    transition: .3s ease transform;
-    outline: none;
 }
 #projects .projects-item-img5 {
-    display: flex;
     background-image: url(./images/Project-05.png);
-    justify-content: flex-start;
-    width: 650px;
-    height: 500px;
-    background-size: cover;
-    background-position: center;  
-    align-items: center;
-    overflow: hidden;   
-    margin: 0;
-    max-width: 650px;
-    max-height: 500px;
-    margin: 0 10px;
-    border: 3px solid black;
-    position: relative;
-    z-index: 1;
-    transition: .3s ease transform;
-    outline: none;
 }
 #projects .projects-item-img6 {
-    display: flex;
-    background-image: url(./images/Project-06.png);
-    justify-content: flex-start;
-    width: 650px;
-    height: 500px;
-    background-size: cover;
-    background-position: left;  
-    align-items: center;
-    overflow: hidden;   
-    margin: 0;
-    max-width: 650px;
-    max-height: 500px;
-    margin: 0 10px;
-    border: 3px solid black;
-    position: relative;
-    z-index: 1;
-    transition: .3s ease transform;
-    outline: none;   
+    background-image: url(./images/Project-06.png);  
 }
 #projects .projects-item-img7 {
-    display: flex;
     background-image: url(./images/project-07-real.png);
-    justify-content: flex-start;
-    width: 650px;
-    height: 500px;
-    background-size: cover;
-    background-position: center;  
-    align-items: center;
-    border: 3px solid black;
-    overflow: hidden;   
-    margin: 0 10px;
-    max-width: 650px;
-    max-height: 500px;
-    position: relative;
-    z-index: 1;
-    outline: none;
-    transition: .3s ease transform;
 }
 #projects .projects-item-img8 {
-    display: flex;
     background-image: url(./images/project-08.png);
-    justify-content: flex-start;
-    width: 650px;
-    height: 500px;
-    background-size: cover;
-    background-position: center;  
-    align-items: center;
-    border: 3px solid black;
-    overflow: hidden;   
-    margin: 0 10px;
-    max-width: 650px;
-    max-height: 500px;
-    position: relative;
-    z-index: 1;
-    outline: none;
-    transition: .3s ease transform;
 } 
 #projects .projects-item-img9 {
-    display: flex;
-    background-image: url(./images/project-09.png);
-    justify-content: flex-start;
-    width: 650px;
-    height: 500px;
-    background-size: cover;
-    background-position: center;  
-    align-items: center;
-    border: 3px solid black;
-    overflow: hidden;   
-    margin: 0 10px;
-    max-width: 650px;
-    max-height: 500px;
-    position: relative;
-    z-index: 1;
-    outline: none;
-    transition: .3s ease transform;  
+    background-image: url(./images/project-09.png);  
 }
 #projects .projects-item-img10 {
-    display: flex;
-    background-image: url(./images/project-10.png);
-    justify-content: flex-start;
-    width: 650px;
-    height: 500px;
-    background-size: cover;
-    background-position: center;  
-    align-items: center;
-    border: 3px solid black;
-    overflow: hidden;   
-    margin: 0 10px;
-    max-width: 650px;
-    max-height: 500px;
-    position: relative;
-    z-index: 1;
-    outline: none;
-    transition: .3s ease transform;  
+    background-image: url(./images/project-10.png);  
 }
 #projects .projects-item-img11 {
-    display: flex;
-    background-image: url(./images/project11.png);
-    justify-content: flex-start;
-    width: 650px;
-    height: 500px;
-    background-size: cover;
-    background-position: center;  
-    align-items: center;
-    border: 3px solid black;
-    overflow: hidden;   
-    margin: 0 10px;
-    max-width: 650px;
-    max-height: 500px;
-    position: relative;
-    z-index: 1;
-    outline: none;
-    transition: .3s ease transform;  
+    background-image: url(./images/project11.png);  
 }
 #projects .projects-item-img12 {
-    display: flex;
-    background-image: url(./images/project12.png);
-    justify-content: flex-start;
-    width: 650px;
-    height: 500px;
-    background-size: cover;
-    background-position: center;  
-    align-items: center;
-    border: 3px solid black;
-    overflow: hidden;   
-    margin: 0 10px;
-    max-width: 650px;
-    max-height: 500px;
-    position: relative;
-    z-index: 1;
-    outline: none;
-    transition: .3s ease transform;     
+    background-image: url(./images/project12.png);     
 }
+#projects .projects-item-img13 {
+    background-image: url(./images/coming-soon.png);
+}
+#projects .projects-item-img14 {
+    background-image: url(./images/project14.png);
+}
+#projects .projects-item-img15 {
+    background-image: url(./images/project15.png);
+}
+
 
 #projects .overlay::after {
     content: '';
