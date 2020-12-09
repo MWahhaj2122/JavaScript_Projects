@@ -157,6 +157,10 @@ let transactions = dummyTransactions;
             }     
            
       init();
+      if(transactions){
+        const array =  transactions.map((transaction, index) => transaction);    
+          localStorage.setItem("Object", JSON.stringify(array));
+     }
     
     }
 //Function to add Local Storage
