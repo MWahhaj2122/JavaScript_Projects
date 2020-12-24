@@ -1,36 +1,85 @@
 const quizData = [
              {
-               question: "When Javascript  is first introduce in the world?",
-               a:"1995",
-               b:"1996",   
-               c:"1997",
-               d:"1998",
-               correct: "a"  
+               question: "What is mean by 'this' keyword in javascript?",
+               a: "It refers previous object",
+               b:  "It refers current object",
+               c:  "It is variable which contains value",
+               d:  "None",
+               correct: "b"  
             },
              {
-                question: "Who is the most popular language in world?",
-                a:"Java",
-                b:"Python",   
-                c:"Javascript",
-                d:"C",
+                question: "In JavaScript, Window.prompt() method return true or false value? ",
+               a: "True",
+               b:  "False",
+               c:  "Both",
+               d:  "None",
                 correct: "b"  
              },
              {
-                question: "Who is  the Prime Minister of Pakistan?",
-                a:"Imran Khan",
-                b:"Nawaz Sharif",   
-                c:"Maryum Nawaz",
-                d:"Bilawal Bhutto",
+                question: "Which of the following is not a valid JavaScript variable name?",
+                a:"2names",
+                b:"_first_and_last_names",   
+                c:"FirstAndLast",
+                d:"None of these",
                 correct: "a"
              },
              {
-                question: "Who is CM of Punjab in Pakistan?",
-                a:"Shahbaz Sharif",
-                b:"Usman Buzdar",   
-                c:"Hamza Shahbaz",
-                d:"Shiekh Rasheed",
-                correct: "b"
-             } 
+                question: "______ tag is an extension to HTML that can enclose any number of JavaScript statements?",
+                a:"<SCRIPT>",
+                b:"<BODY>",   
+                c:"<HEAD>",
+                d:"<TITLE>",
+                correct: "a"
+             },
+             {
+               question: "Which of the following attribute can hold the JavaScript version?",
+               a:"LANGUAGE",
+               b:"SCRIPT",   
+               c:"VERSION",
+               d:"NONE OF THESE",
+               correct: "a"
+            },
+            {
+               question: "Inside which HTML element do we put the JavaScript?",
+               a:"<js>",
+               b:"<scripting>",   
+               c:"<script>",
+               d:"<javascript>",
+               correct: "d"
+            },
+            {
+               question: "Which types of image maps can be used with JavaScript?",
+               a:" Server-side image maps",
+               b:" Client-side image maps",   
+               c:"Both",
+               d:"None of these",
+               correct: "b"
+            },
+            {
+               question: "Which of the following is not considered a JavaScript operator?",
+               a:"new",
+               b:"this",   
+               c:"delete",
+               d:"None of these",
+               correct: "b"
+            },
+            {
+               question: "JavaScript is interpreted by _____",
+               a:"Client",
+               b:"Server",   
+               c:"Object",
+               d:"None of these",
+               correct: "a"
+            },
+            {
+               question: "Using _______ statement is how you test for a specific condition?",
+               a:"Select",
+               b:"If",   
+               c:"Switch",
+               d:"For",
+               correct: "b"
+            }
+
 ];
 //Getting DOM elements
 //Questions
