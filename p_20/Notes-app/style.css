@@ -1,0 +1,122 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    /* background-color: #422057FF; */
+    /* background-color: #6E4C1EFF; */
+    /* background-color: #fff; */
+}
+header {
+    margin: 0;
+    padding: 0;
+    background-color: #16a085;
+    /* color: #FEE715FF; */
+}
+header h3 {
+    margin: 0;
+    padding: 5px;
+    border: 0;
+}
+.header {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+    /* color: #FFC312;  */
+}
+/* h1, h3 {
+
+    text-align: left;
+} */
+.addNotes {
+    border:  1px solid gray;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+    width: 370px;
+    max-width: 100%;
+}
+.addNotes button {
+    width: 100px;
+    margin: 5px 0;
+    background-color: darkcyan;
+    /* background-color: #05c46b; */
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 0;
+    font-size: 18px;
+}
+
+ h5 {
+  margin: 0;
+  padding: 0;
+}
+
+.search {
+    position: absolute;
+    right: 2px;
+    top: 3px;
+    border-radius: 10px;
+    border: 0;
+    padding: 4px;
+}
+.search:focus {
+    outline: none;
+}
+h1 {
+    border-bottom: 1px solid gray;
+}
+.Notes {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 10px;
+    width: 370px;
+    max-width: 100%;
+    /* border-bottom: 1px solid gray; */
+    /* border-radius: 10px; */
+  }
+.added-notes {
+    border: 2px solid gray;
+    width: 100px;
+    /* text-align: center; */
+    margin:  10px;   
+    padding: 6px; 
+    border-radius: 10px;
+}
+.added-notes button {
+    width: 70px;
+    /* background-color: #05c46b; */
+    background-color: darkcyan;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 0;
+    font-size: 18px;
+    margin: 5px 0;
+}
+.added-notes h5 {
+    margin: 0;
+    padding: 0;
+}
+.added-notes p {
+    margin: 5px 0;
+}
+/* .added-notes p {
+   text-justify: auto;   
+} */
+/* .delete-btn {
+   /* position: absolute;
+   bottom: 0;
+    */
+/* } */ 

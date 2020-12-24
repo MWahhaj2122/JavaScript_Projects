@@ -53,6 +53,7 @@ const ImageArray = [
 let choosenCardID = [];
 let choosenCards = [];
 let cardsWon = [];
+const grid = document.getElementById('grid');
 ImageArray.sort(()=> .5 - Math.random());
 //DOMElements
 const gridContainer = document.querySelector('.grid');
@@ -136,8 +137,14 @@ console.log(choosenCardID);
          //pushing value 
          cardsWon.push(111);
          if(cardsWon.length === ImageArray.length/2){
-            alert("Game Over"); 
-         }   
+            alert("Game Over");
+      // grid.innerHTML = `
+      // <h2>Game Over</h2> 
+      
+      // <button class= "btn" onclick= "location.reload()">Play Again</button>
+      // `   
+     } 
+            
         }else {
           alert('Match donot fouund');  
           allCards[choosenCardID[0]].setAttribute('src', 'image/question-mark.png');

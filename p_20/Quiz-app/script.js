@@ -53,6 +53,7 @@ const quizContainer = document.getElementById('quiz-data');
 //Current Quiz 
 let  currentQuiz = 0;
 //Score
+
 let score = 0;
 //
 const startQuizDiv = document.getElementById('start-quiz-div');
