@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+</head>
+<body>
+    <div class="start-quiz" id="start-quiz-div">
+        <input type="text"
+         placeholder="Enter your name"
+         id="start-quiz-input" class="start-quiz-input"/>
+        <button class="start-quiz-btn" id="start-quiz-btn">
+            Start Quiz
+        </button>
+    </div>
+    <div class="quiz-container">
+      <div class="quiz-data" id="quiz-data">
+        <div class="nameAndTime" id="nameAndTime">
+          <span id="name" class="name">Muhammad  Nisar </span>
+          <span id="time" class="time">00:00</span>
+        </div>
+       <h2 id="question-number" class="question-number">Question number: 1</h2>   
+       <h2 id="heading" class="question-text">Question Text</h2>
+       <ul>
+        <li>   
+         <input type="radio" name="answer" id="a">
+         <label for="a" id="a_text" >Options</label> 
+        </li>
+        
+        <li>   
+            <input type="radio" name="answer" id="b">
+            <label for="b" id="b_text">Options</label> 
+        </li>
+
+        <li>   
+            <input type="radio" name="answer" id="c">
+            <label for="c" id="c_text">Options</label> 
+        </li>
+
+        <li>   
+            <input type="radio" name="answer" id="d">
+            <label for="d" id="d_text">Options</label> 
+        </li>   
+       </ul>
+        <button class="submit-btn" id="submit-btn">
+            Submit
+        </button>
+
+      </div>  
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

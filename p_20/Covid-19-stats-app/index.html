@@ -1,0 +1,94 @@
+<!-- CODE EXPLAINED TUTORIALS -->
+<!-- youtube.com/CodeExplained -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 STATS</title>
+    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+</head>
+<body>
+    <header>
+      <div class="logo">
+       <img src="resources/img/logo.png" alt="logo" >
+       <p>COVID-19 <br/> STATS</p>   
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#aboutUs">ABOUT US</a></li>  
+        </ul>  
+      </nav>  
+    </header>
+    <main> 
+      <div class="stats" id="home">
+        <div class="latest-report">
+          <div class="contry">
+           <div class="name">Loading...</div>
+           <div class="change">Change</div>
+           <div class="search-contry hide">
+              <div class="search-box">
+               <input type="text"
+               placeholder="Search for contry"
+               id="serach-input"
+               >
+               <button class="close-btn" id="close-btn">
+               <i class="fas fa-window-close"></i>
+               </button>
+              </div>
+              <div class="contry-list">
+                  <!-- <ul id="">
+                  <li>UK</li>
+                  <li>UK</li>
+                  <li>UK</li>
+                  <li>UK</li>
+                  <li>UK</li>
+                  <li>UK</li>
+                  <li>UK</li>
+                  <li>UK</li>
+                  <li>UK</li>
+                  <li>UK</li>
+                  <li>UK</li>
+                   </ul>
+                 -->
+              </div> 
+           </div>
+          </div>
+          <div class="total-cases">
+             <div class="title">Total</div>
+             <div class="value">0</div>
+             <div class="new-value">+0</div> 
+          </div>
+          <div class="recovered">
+            <div class="title">Recovered</div>
+            <div class="value">0</div>
+            <div class="new-value">+0</div> 
+         </div>
+         <div class="deaths">
+            <div class="title">Deaths</div>
+            <div class="value">0</div>
+            <div class="new-value">+0</div> 
+         </div>  
+        </div>
+        <div class="chart">
+           <canvas id="chart"></canvas> 
+        </div>  
+      </div>  
+    </main>
+    <footer id="aboutUs">
+       <div class="copy-right">
+          CopyRight © 2020 M.Wahhaj
+       </div> 
+    </footer>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+      integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI="
+      crossorigin="anonymous"
+    ></script>
+    <script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
+    <script src="resources/js/app1.js"></script>
+    <script src="resources/js/countries.js"></script>
+</body>
+</html>

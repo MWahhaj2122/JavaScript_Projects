@@ -1,0 +1,82 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    background-color: rebeccapurple;
+    color: white;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.password-container {
+    /* background-color: #0c1631; */
+    background-color: rgb(46, 12, 80);
+    box-shadow: 0 4px 10px rgba(0, 0,0,.5);
+    width: 400px;
+    max-width: 100%;
+    padding: 1rem;
+}
+.password-header {
+    width: 100%;
+    background-color: #fff;
+    color: black;   
+}
+.password {
+    padding: .5rem 1rem;
+    position: relative;
+    background-color: rgb(69, 28, 109);
+    color: #fff;
+}
+.password button {
+    position: absolute;
+    top: 0;
+    left: 90.5%;
+    opacity: 0;
+    transition: opacity .3s ease-in;
+    cursor: pointer;
+    background-color: white;
+    color: rgb(46, 12, 80);;
+    border: 0;
+    padding: 11.3px;
+    font-size: 18px;
+}
+.password button:focus {
+    outline: none;
+}
+.password button:active {
+    transform: scale(.95);
+}
+.password:hover button {
+    opacity: 1;
+}
+
+.password span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.form-controls {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+    color: #eee;
+}
+.generatePassword {
+    /* background-color: #008161; */
+    background-color: #ecb602;
+    color: rgb(46, 12, 80);;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: .5rem;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    width: 100%;
+}
+.generatePassword:focus {
+    outline: none;
+}
+.generatePassword:active {
+    transform: scale(.95);
+}

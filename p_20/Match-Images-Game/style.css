@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+.imageDiv {
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: darkslategrey;
+    margin: 5px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: all .5s ease;
+}
+.imageDiv:active {
+    transform: rotateY(100deg);
+}
+h3 {
+    text-align: center;
+}
+h3 span {
+    color: crimson;
+}
+
+
+@media (max-width: 399px){
+    .grid {
+       margin: 0 53px; 
+    }
+    .imageDiv {
+        width: 100px;
+    }
+}
+
+
+@media (min-width: 400px) and (max-width:600px){
+    .grid {
+       margin: 0 30px; 
+    }
+    .imageDiv {
+        width: 100px;
+    }
+}
+
+
+

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="#" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <title>Buissiness Online</title>
+</head>
+<body>
+  <h1>Checkout</h1>
+  <small class="small">First Click to add products, Second Click add product to cart</small>
+  <div class="icons">
+
+  </div>
+  <main id="main" class="container"></main>
+  <!-- <div class="container" id="container">
+   <div class="div">
+     
+     <div class="imageContainer" >
+       <img src="images/plus-sign.png" alt="image" class="image" id="image0">
+       <div class="text">
+         <span class="name1" id="name1"> Wahhaj </span>
+         <span class="price1" id="price1">RS: 123</span>
+
+       </div> 
+     
+      </div>
+     
+   
+   </div> 
+  
+
+
+  </div> -->
+    <div class="products-add-div" id="products-add-div">
+      <button id="go-backBtn" class="go-back-btn">
+        <i class="fas fa-arrow-left">  GO Back</i>
+      </button>
+      <div class="add-images-container" id="add-images-container">
+      <input type="file" class="inputFileOverlay" id="inputFile">
+      <div class="imageContainer1" >
+        <img src="" alt="image" class="imageOverlayContainer" id="image">
+       <span class="default--text1" id="default--text"></span>
+       
+      </div>
+      <div class="text"></div>
+       </div>
+      <div class="prouct-details">
+        <form id="form" class="form">
+        <input type="text" placeholder="Product Name" class="product-name" id="productName">  
+        <input type="number" placeholder="Price" class="price" id="productPrice">
+
+        <button class="submit-btn" id="submit">
+          Create Product
+        </button>
+        </form>
+      </div>
+    
+
+    </div>
+
+
+    <div class="end-buttons">
+    <button class="cart-btn" id="cart">
+      0 items = PKR 0
+    </button>
+   </div>
+<!-- Cart Page -->
+   <div class="cart-overlay" id="cart-overlay">
+    <button id="go-backBtn2" class="go-back-btn">
+      <i class="fas fa-arrow-left">  GO Back</i>
+    </button>
+     <h1>Cart</h1>
+     <small>Click  to delete the item from cart</small>
+     <ul class="list" id="list">
+       <!-- <li class="list-item">
+         <span>1* Wahhaj</span>
+         <span>PKR 1200</span>
+       </li>
+       <li class="list-item">
+        <span>1* Wahhaj</span>
+        <span>PKR 1200</span>
+      </li> -->
+     </ul>
+       <div class="discount" id="discount">
+       <span class="cartDiscountPrice" id="cartDiscountPrice">Add Discount</span>  
+       </div>
+     <span class="totalCartPrice" id="totalcartPrice"></span>
+   <div class="buttons-cart-page2">
+    <div class="end-buttons">  
+   <button class="cart-btn" id="cart-btn2">
+    0 items = PKR 0
+   </button>
+    </div>
+
+
+
+
+   <!-- <button class="discount-btn" id="discountBtn">
+     Discount
+   </button> -->
+   </div>
+ </div>
+  <div class="discountOverlay" id="discountOverlay" >
+    <h1>Discount Price</h1>
+    <input type="number"  id="discountInput" class="discountInput"
+     placeholder="Amount" />
+     <div class="end-buttons">
+     <button class="cart-btn" id="applyDiscount">
+       AppplyDiscount
+     </button>
+     </div>
+  </div>
+   <div class="ending-div" id="ending-div">
+     <div class="div22">
+       Thank You!!! For Order
+     </div>
+   </div>
+
+<!-- 
+
+  valueArray = index;
+       console.log(valueArray);
+ -->
+
+
+  <script src="script.js"></script>
+</body>
+</html>
